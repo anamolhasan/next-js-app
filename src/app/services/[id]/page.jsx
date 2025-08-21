@@ -51,12 +51,18 @@ const ServiceDetailsPage = ({ params }) => {
 
   if (singleData) {
     return (
-      <div>
-        <h1>ServiceDetailsPage</h1>
-        <p>ID: {id}</p>
-        <p>Name: {singleData.service_name}</p>
-        <p>Description: {singleData.service_description}</p>
-        <img src={singleData.service_image} alt="" />
+      <div className="py-20">
+        <h1 className="text-center font-bold text-2xl py-10">ServiceDetailsPage</h1>
+        <div className="flex items-center justify-center gap-5">
+          <div>
+            <p>ID: {id}</p>
+            <p>Name: {singleData.service_name}</p>
+            <p>Description: {singleData.service_description}</p>
+          </div>
+          <div>
+            <img className="w-xl" src={singleData.service_image} alt="" />
+          </div>
+        </div>
       </div>
     );
   } else {
